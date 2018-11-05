@@ -1,0 +1,8 @@
+- name: Install Docker and Docker-Compose
+  become: yes
+  pacman:
+    name: ['docker', 'docker-compose']
+
+- name: Enable Docker Daemon
+  become: yes
+  systemd: name=docker enabled=yes state=started
