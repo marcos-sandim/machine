@@ -1,0 +1,7 @@
+- name: Install terminal
+  become: yes
+  pacman: name=termite
+
+- name: Install ranger
+  become: yes
+  pacman: name=ranger

@@ -11,5 +11,5 @@ fi
 
 python --version
 ansible --version
-ansible-playbook main.yml
+ansible-playbook -K main.yml
 

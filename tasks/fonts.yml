@@ -1,0 +1,5 @@
+- name: Install pacman fonts
+  become: yes
+  pacman:
+    name: ['ttf-dejavu', 'ttf-fira-mono']
+

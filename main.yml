@@ -3,9 +3,14 @@
   tasks:
     # essentials:
     - include: tasks/core.yml
+    - include: tasks/fonts.yml
+
+    # Window Manager
+    - include: tasks/program-launcher.yml
 
     # editors, IDEs, terminals, etc
     - include: tasks/visual-studio-code.yml
+    - include: tasks/terminal.yml
 
     # browsers
     - include: tasks/chrome.yml
