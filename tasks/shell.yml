@@ -1,0 +1,11 @@
+- name: Install ZSH
+  become: yes
+  pacman: name=zsh
+
+- name: Set ZSH as user's shell
+  become: yes
+  shell: chsh -s /bin/zsh
+
+- name: Install Antibody
+  yay: name=antibody
+

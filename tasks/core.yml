@@ -1,9 +1,5 @@
 - name: Install core packages
   become: yes
   pacman:
-    name: ['curl', 'git', 'htop', 'vim', 'wget', 'zsh']
-
-- name: Set ZSH as user shell
-  become: yes
-  shell: chsh -s /bin/zsh
+    name: ['curl', 'git', 'htop', 'vim', 'wget']
 

@@ -4,6 +4,8 @@
     # essentials:
     - include: tasks/core.yml
     - include: tasks/fonts.yml
+    - include: tasks/ranger.yml
+    - include: tasks/shell.yml
 
     # Window Manager
     - include: tasks/program-launcher.yml
@@ -12,9 +14,14 @@
     - include: tasks/visual-studio-code.yml
     - include: tasks/terminal.yml
 
+    # languages
+    - include: tasks/node.yml
+    - include: tasks/ruby.yml
+
     # browsers
     - include: tasks/chrome.yml
 
     # media
+    - include: tasks/playerctl.yml
     - include: tasks/spotify.yml
 
