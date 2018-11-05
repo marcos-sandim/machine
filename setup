@@ -1,0 +1,15 @@
+#!/bin/bash
+if test ! "$(which yay)"; then
+  echo "Please install yay first"
+  exit 1
+fi
+
+if test ! "$(which ansible)"; then
+  echo "Please install ansible first"
+  exit 1
+fi
+
+python --version
+ansible --version
+ansible-playbook main.yml
+

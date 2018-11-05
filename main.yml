@@ -1,0 +1,15 @@
+- hosts: localhost
+
+  tasks:
+    # essentials:
+    - include: tasks/core.yml
+
+    # editors, IDEs, terminals, etc
+    - include: tasks/visual-studio-code.yml
+
+    # browsers
+    - include: tasks/chrome.yml
+
+    # media
+    - include: tasks/spotify.yml
+
