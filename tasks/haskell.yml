@@ -1,0 +1,5 @@
+- name: Install GHC and Tools
+  become: yes
+  pacman:
+    name: ['ghc', 'haskell-haddock-library', 'alex', 'happy', 'cabal-install', 'stack']
+

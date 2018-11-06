@@ -20,6 +20,9 @@
     # languages
     - include: tasks/node.yml
     - include: tasks/ruby.yml
+    - include: tasks/erlang.yml
+    - include: tasks/elixir.yml
+    - include: tasks/haskell.yml
 
     # browsers
     - include: tasks/chrome.yml

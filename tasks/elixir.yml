@@ -1,0 +1,4 @@
+- name: Install Elixir
+  become: yes
+  pacman: name=elixir
+

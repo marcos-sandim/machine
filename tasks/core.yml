@@ -1,5 +1,5 @@
 - name: Install core packages
   become: yes
   pacman:
-    name: ['curl', 'git', 'htop', 'vim', 'wget']
+    name: ['curl', 'git', 'htop', 'vim', 'wget', 'tree', 'pacman-contrib']
 

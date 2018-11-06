@@ -1,0 +1,4 @@
+- name: Install Erlang
+  become: yes
+  pacman: name=erlang
+
