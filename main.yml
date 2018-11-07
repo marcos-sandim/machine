@@ -31,3 +31,7 @@
     - include: tasks/playerctl.yml
     - include: tasks/spotify.yml
 
+    # applications
+    - include: tasks/pdf-reader.yml
+
+
