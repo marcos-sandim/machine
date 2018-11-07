@@ -10,3 +10,11 @@
       - 'tree'
       - 'pacman-contrib'
 
+- name: Install Image tools
+  become: yes
+  pacman:
+    name:
+      - exiv2
+      - perl-image-exiftool
+      - libvips 
+
