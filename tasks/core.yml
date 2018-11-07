@@ -12,7 +12,7 @@
 
 - name: Install Image tools
   become: yes
-  pacman:
+  yay:
     name:
       - exiv2
       - perl-image-exiftool

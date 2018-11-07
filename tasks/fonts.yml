@@ -5,3 +5,8 @@
       - 'ttf-dejavu'
       - 'ttf-fira-mono'
 
+- name: Install aur fonts
+  yay:
+    name:
+      - 'nerd-fonts-complete'
+
