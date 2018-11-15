@@ -1,0 +1,11 @@
+- name: Download dotfiles
+  git:
+    repo=git@gitlab.com:bruno-delfino1995/dotfiles.git
+    dest=~/.dotfiles
+    version=master
+    update=yes
+  become: false
+
+- name: Install dotfiles
+  shell: ~/.dotfiles/scripts/install-home
+

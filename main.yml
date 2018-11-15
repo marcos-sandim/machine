@@ -34,4 +34,5 @@
     # applications
     - include: tasks/pdf-reader.yml
 
-
+    # Environment
+    - include: tasks/dotfiles.yml
