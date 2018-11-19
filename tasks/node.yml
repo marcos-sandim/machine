@@ -2,6 +2,6 @@
   become: yes
   pacman:
     name: 
-      - 'nodejs'
-      - 'npm'
-      - 'yarn'
+      - nodejs
+      - npm
+      - yarn

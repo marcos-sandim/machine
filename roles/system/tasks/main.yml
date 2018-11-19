@@ -1,0 +1,16 @@
+# essentials:
+- include: core.yml
+- include: fonts.yml
+- include: ranger.yml
+- include: shell.yml
+
+# Window Manager
+- include: program-launcher.yml
+
+- include: terminal.yml
+
+# media
+- include: playerctl.yml
+
+# Environment
+- include: dotfiles.yml

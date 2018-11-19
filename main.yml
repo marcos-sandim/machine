@@ -1,18 +1,9 @@
 - hosts: localhost
-
+  roles:
+    - system
   tasks:
-    # essentials:
-    - include: tasks/core.yml
-    - include: tasks/fonts.yml
-    - include: tasks/ranger.yml
-    - include: tasks/shell.yml
-
-    # Window Manager
-    - include: tasks/program-launcher.yml
-
     # editors, IDEs, terminals, etc
     - include: tasks/visual-studio-code.yml
-    - include: tasks/terminal.yml
 
     # tools
     - include: tasks/docker.yml
@@ -28,11 +19,7 @@
     - include: tasks/chrome.yml
 
     # media
-    - include: tasks/playerctl.yml
     - include: tasks/spotify.yml
 
     # applications
     - include: tasks/pdf-reader.yml
-
-    # Environment
-    - include: tasks/dotfiles.yml

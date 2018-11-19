@@ -5,8 +5,6 @@
       - 'ttf-dejavu'
       - 'ttf-fira-mono'
 
-- name: Install aur fonts
-  yay:
-    name:
-      - 'nerd-fonts-complete'
+# - name: Install aur fonts
+#   yay: name=nerd-fonts-complete state=present
 

@@ -4,7 +4,7 @@
 
 - name: Set ZSH as user's shell
   become: yes
-  shell: chsh -s /bin/zsh
+  shell: chsh -s /bin/zsh bruno
 
 - name: Install Antibody
   yay: name=antibody

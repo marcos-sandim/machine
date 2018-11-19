@@ -2,10 +2,10 @@
   become: yes
   pacman:
     name:
-      - 'ghc'
-      - 'haskell-haddock-library'
-      - 'alex'
-      - 'happy'
-      - 'cabal-install'
-      - 'stack'
+      - ghc
+      - haskell-haddock-library
+      - alex
+      - happy
+      - cabal-install
+      - stack
 
