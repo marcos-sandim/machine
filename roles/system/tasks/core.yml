@@ -2,18 +2,15 @@
   become: yes
   pacman:
     name:
-      - curl
       - git
-      - htop
-      - vim
+      - curl
       - wget
       - tree
-      - pacman-contrib
+      - htop
 
-- name: Install Image tools
+- name: Install image tools
   yay: name={{ item }}
   loop:
       - exiv2
       - perl-image-exiftool
-      - libvips 
-
+      - libvips

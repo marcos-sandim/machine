@@ -1,0 +1,7 @@
+- name: Install PCMan
+  become: yes
+  pacman: name=pcmanfm
+
+- name: Install ranger
+  become: yes
+  pacman: name=ranger

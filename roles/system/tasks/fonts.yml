@@ -1,10 +1,9 @@
 - name: Install pacman fonts
   become: yes
   pacman:
-    name: 
-      - 'ttf-dejavu'
-      - 'ttf-fira-mono'
+    name:
+      - ttf-dejavu
+      - ttf-fira-mono
 
-# - name: Install aur fonts
-#   yay: name=nerd-fonts-complete state=present
-
+- name: Install aur fonts
+  yay: name=nerd-fonts-complete

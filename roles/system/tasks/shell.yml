@@ -9,3 +9,6 @@
 - name: Install Antibody
   yay: name=antibody
 
+- name: Install terminal
+  become: yes
+  pacman: name=termite

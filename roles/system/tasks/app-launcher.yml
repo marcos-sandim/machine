@@ -1,4 +1,3 @@
 - name: Install Rofi
   become: yes
   pacman: name=rofi
-

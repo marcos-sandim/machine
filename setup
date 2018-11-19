@@ -1,4 +1,9 @@
 #!/bin/bash
+if test ! "$(which python)"; then
+  echo "Please install python first"
+  exit 1
+fi
+
 if test ! "$(which yay)"; then
   echo "Please install yay first"
   exit 1
@@ -10,10 +15,10 @@ if test ! "$(which ansible)"; then
 fi
 
 if [ ! -f /usr/share/ansible/plugins/modules/yay ]; then
-  wget -O /usr/share/ansible/plugins/modules/yay https://raw.githubusercontent.com/mnussbaum/ansible-yay/master/yay
+  curl -fLo /usr/share/ansible/plugins/modules/yay --create-dirs \
+    https://raw.githubusercontent.com/mnussbaum/ansible-yay/master/yay
 fi
 
 python --version
 ansible --version
 ansible-playbook -K main.yml
-

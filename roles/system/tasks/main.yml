@@ -1,16 +1,9 @@
-# essentials:
+- include: pacman.yml
 - include: core.yml
-- include: fonts.yml
-- include: ranger.yml
 - include: shell.yml
-
-# Window Manager
-- include: program-launcher.yml
-
-- include: terminal.yml
-
-# media
+- include: vim.yml
+- include: fonts.yml
+- include: file-manager.yml
+- include: app-launcher.yml
 - include: playerctl.yml
-
-# Environment
 - include: dotfiles.yml

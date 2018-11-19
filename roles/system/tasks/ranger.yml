@@ -1,4 +1,0 @@
-- name: Install ranger
-  become: yes
-  pacman: name=ranger
-
