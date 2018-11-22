@@ -7,6 +7,8 @@
       - wget
       - tree
       - htop
+      - zip
+      - unzip
 
 - name: Install image tools
   yay: name={{ item }}
