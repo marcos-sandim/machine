@@ -1,0 +1,3 @@
+- name: Install audio tools
+  become: yes
+  pacman: name=pulseaudio
