@@ -3,6 +3,9 @@
 - include: shell.yml
 - include: audio.yml
 - include: bluetooth.yml
+- include: audio-player.yml
+- include: video-player.yml
+- include: image-viewer.yml
 - include: vim.yml
 - include: fonts.yml
 - include: file-manager.yml

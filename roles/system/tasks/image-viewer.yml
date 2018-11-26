@@ -1,0 +1,3 @@
+- name: Install image viewer
+  become: yes
+  pacman: name=sxiv
