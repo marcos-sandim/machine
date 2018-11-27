@@ -11,4 +11,5 @@
 - include: file-manager.yml
 - include: app-launcher.yml
 - include: playerctl.yml
+- include: window-manager.yml
 - include: dotfiles.yml
