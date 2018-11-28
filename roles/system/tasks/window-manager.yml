@@ -12,3 +12,10 @@
 - name: Install status bar
   yay: name=polybar
 
+- name: Install screen utilities
+  become: yes
+  pacman:
+    name:
+      - arandr
+      - i3lock
+      - scrot
