@@ -3,16 +3,10 @@
   pacman:
     name:
       - git
+      - openssh
       - curl
       - wget
       - tree
       - htop
       - zip
       - unzip
-
-- name: Install image tools
-  yay: name={{ item }}
-  loop:
-      - exiv2
-      - perl-image-exiftool
-      - libvips
