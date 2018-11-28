@@ -1,0 +1,4 @@
+- name: Toogle Caps into escape
+  shell: |
+    setxkbmap -option "caps:escape"
+    setxkbmap -option "shift:both_capslock_cancel"
