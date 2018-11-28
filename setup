@@ -14,9 +14,13 @@ if test ! "$(which ansible)"; then
   exit 1
 fi
 
-if [ ! -f /usr/share/ansible/plugins/modules/yay ]; then
-  curl -fLo /usr/share/ansible/plugins/modules/yay --create-dirs \
-    https://raw.githubusercontent.com/mnussbaum/ansible-yay/master/yay
+if test ! -f /usr/share/ansible/plugins/modules/yay; then
+  echo "Execute the following to install ansible-yay module"
+  cat <<-EOF
+			# curl -fLo /usr/share/ansible/plugins/modules/yay --create-dirs \
+					https://raw.githubusercontent.com/mnussbaum/ansible-yay/master/yay
+			# chmod -R 755 /usr/share/ansible/plugins
+			EOF
 fi
 
 python --version
