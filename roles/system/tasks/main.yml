@@ -6,6 +6,7 @@
 - include: audio-player.yml
 - include: video-player.yml
 - include: image-viewer.yml
+- include: pdf-reader.yml
 - include: vim.yml
 - include: fonts.yml
 - include: file-manager.yml

@@ -1,0 +1,7 @@
+- include: docker.yml
+- include: erlang.yml
+- include: elixir.yml
+- include: haskell.yml
+- include: node.yml
+- include: ruby.yml
+- include: postman.yml
