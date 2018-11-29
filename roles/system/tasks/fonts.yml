@@ -4,6 +4,9 @@
     name:
       - ttf-dejavu
       - ttf-fira-mono
+      - noto-fonts
+      - noto-fonts-emoji
+      - noto-fonts-extra
 
 - name: Install aur fonts
   yay: name=nerd-fonts-complete
