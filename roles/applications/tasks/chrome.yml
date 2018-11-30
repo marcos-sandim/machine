@@ -1,2 +1,0 @@
-- name: Install Chrome
-  yay: name=google-chrome

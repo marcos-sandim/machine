@@ -4,6 +4,7 @@
     name:
       - git
       - openssh
+      - openvpn
       - curl
       - wget
       - tree

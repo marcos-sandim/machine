@@ -1,4 +1,4 @@
 - include: enpass.yml
-- include: chrome.yml
+- include: browsers.yml
 - include: spotify.yml
 - include: visual-studio-code.yml
