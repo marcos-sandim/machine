@@ -1,5 +1,6 @@
 - include: pacman.yml
 - include: network.yml
+- include: modprobe.yml
 - include: core.yml
 - include: shell.yml
 - include: keyboard.yml
