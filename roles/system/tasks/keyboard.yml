@@ -1,4 +1,3 @@
 - name: Toogle Caps into escape
   shell: |
-    setxkbmap -option "caps:escape"
-    setxkbmap -option "shift:both_capslock_cancel"
+    localectl --no-convert set-x11-keymap br abnt2 "" caps:escape,shift:both_capslock_cancel
