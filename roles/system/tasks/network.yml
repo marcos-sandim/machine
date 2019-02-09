@@ -1,7 +1,3 @@
-- name: Remove network tools from base
-  become: yes
-  pacman: name=netctl,dhcpcd state=absent
-
 - name: Install connman
   become: yes
   pacman: name=connman
@@ -20,3 +16,7 @@
 - name: Enable and start connman
   become: yes
   systemd: name=connman enabled=yes state=started
+
+- name: Remove network tools from base
+  become: yes
+  pacman: name=netctl,dhcpcd state=absent
