@@ -1,22 +1,20 @@
-- name: Install connman
-  become: yes
-  pacman: name=connman
 
-- name: Install connman-ncurses
-  yay: name=connman-ncurses
-
-- name: Ensure connman config dir exists
+- name: Install network manager
   become: yes
-  file: path=/etc/connman state=directory
+  pacman: netctl,dhcpcd state=absent
 
-- name: Copy connman config
+- name: Install DHCP Client Daemon
   become: yes
-  copy: src=connman.conf dest=/etc/connman/main.conf
+  pacman: dhcpcd
 
-- name: Enable and start connman
+- name: Install Wifi tools
   become: yes
-  systemd: name=connman enabled=yes state=started
+  pacman: name=wpa_supplicant, dialog
 
-- name: Remove network tools from base
+- name: Install resolvconf for DNS config
   become: yes
-  pacman: name=netctl,dhcpcd state=absent
+  pacman: openresolv
+
+- name: Copy custom config files
+  become: yes
+  copy: src=etc dest=/etc

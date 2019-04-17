@@ -1,4 +1,0 @@
-- name: Install Ruby
-  become: yes
-  pacman: name=ruby
-

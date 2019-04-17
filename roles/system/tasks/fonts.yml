@@ -8,6 +8,3 @@
       - noto-fonts-emoji
       - noto-fonts-extra
       - adobe-source-code-pro-fonts
-
-- name: Install aur fonts
-  yay: name=nerd-fonts-complete

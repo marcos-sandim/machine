@@ -8,6 +8,3 @@
 - name: Install Firefox
   become: yes
   pacman: name=firefox
-
-- name: Install NEXT
-  yay: name=next-browser-git
