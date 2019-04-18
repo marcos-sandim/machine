@@ -1,6 +1,5 @@
 - include: pacman.yml
 - include: network.yml
-- include: modprobe.yml
 - include: core.yml
 - include: shell.yml
 - include: keyboard.yml
@@ -17,4 +16,4 @@
 - include: playerctl.yml
 - include: window-manager.yml
 - include: look-and-feel.yml
-- include: dotfiles.yml
+- include: config.yml

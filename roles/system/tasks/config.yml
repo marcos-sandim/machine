@@ -1,3 +1,11 @@
+- name: Copy etc configuration files
+  become: yes
+  copy: src=etc/ dest=/etc/
+
+- name: Copy usr configuration files
+  become: yes
+  copy: src=usr/ dest=/usr/
+
 - name: Download dotfiles
   git:
     repo=git@github.com:bruno-delfino1995/dotfiles.git

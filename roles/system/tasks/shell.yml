@@ -6,14 +6,6 @@
   become: yes
   shell: chsh -s /bin/zsh bruno
 
-- name: Ensure zsh config dir exists
-  become: yes
-  file: path=/etc/zsh state=directory
-
-- name: Copy base zsh setting
-  become: yes
-  copy: src=zshrc dest=/etc/zsh/zshrc
-
 - name: Install terminal
   become: yes
   pacman: name=termite

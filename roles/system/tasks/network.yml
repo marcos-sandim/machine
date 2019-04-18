@@ -1,20 +1,20 @@
 
 - name: Install network manager
   become: yes
-  pacman: netctl,dhcpcd state=absent
+  pacman: name=netctl
 
 - name: Install DHCP Client Daemon
   become: yes
-  pacman: dhcpcd
+  pacman: name=dhcpcd
 
 - name: Install Wifi tools
   become: yes
-  pacman: name=wpa_supplicant, dialog
+  pacman: name=wpa_supplicant,dialog
 
 - name: Install resolvconf for DNS config
   become: yes
-  pacman: openresolv
+  pacman: name=openresolv
 
-- name: Copy custom config files
+- name: Install openvpn for VPN connections
   become: yes
-  copy: src=etc dest=/etc
+  pacman: name=openvpn

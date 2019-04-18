@@ -1,6 +1,6 @@
 - name: Install audio daemon
   become: yes
-  pacman: mpd
+  pacman: name=mpd
 
 - name: Install audio player
   yay: name=pmus-git
