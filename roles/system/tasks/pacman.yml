@@ -1,3 +1,7 @@
+- name: Update pacman database
+  become: yes
+  pacman: update_cache=yes
+
 - name: Install pacman tools
   become: yes
   pacman:
