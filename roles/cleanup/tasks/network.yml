@@ -1,0 +1,4 @@
+- name: Remove base network tools
+  become: yes
+  pacman: name=netctl state=absent
+

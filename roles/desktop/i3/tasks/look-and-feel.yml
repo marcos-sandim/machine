@@ -1,0 +1,14 @@
+- name: Install themes
+  yay: name={{ item }}
+  loop:
+    - numix-gtk-theme
+    - numix-kde-theme-git
+    - xcursor-breeze
+
+- name: Copy usr theming files
+  become: yes
+  copy: src=usr/ dest=/usr/
+
+- name: Copy etc theming files
+  become: yes
+  copy: src=etc/ dest=/etc/

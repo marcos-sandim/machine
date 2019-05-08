@@ -2,5 +2,9 @@
   become: yes
   pacman: name=mpd
 
+- name: Enable audio daemon
+  become: yes
+  systemd: name=mpd enabled=yes state=started
+
 - name: Install audio player
   yay: name=pmus-git

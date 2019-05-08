@@ -2,7 +2,6 @@
 - include: network.yml
 - include: core.yml
 - include: shell.yml
-- include: keyboard.yml
 - include: audio.yml
 - include: bluetooth.yml
 - include: audio-player.yml
@@ -11,9 +10,5 @@
 - include: pdf-reader.yml
 - include: vim.yml
 - include: fonts.yml
-- include: file-manager.yml
-- include: app-launcher.yml
 - include: playerctl.yml
-- include: window-manager.yml
-- include: look-and-feel.yml
 - include: config.yml

@@ -1,6 +1,0 @@
-- name: Install themes
-  yay: name={{ item }}
-  loop:
-    - numix-gtk-theme
-    - numix-kde-theme-git
-    - xcursor-breeze

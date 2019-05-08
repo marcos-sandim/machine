@@ -1,20 +1,24 @@
 
 - name: Install network manager
   become: yes
-  pacman: name=netctl
+  pacman: name=networkmanager
 
-- name: Install DHCP Client Daemon
+- name: Install DHCP Client
   become: yes
   pacman: name=dhcpcd
 
+- name: Enable DHCP Client
+  become: yes
+  systemd: name=dhcpcd enabled=yes state=started
+
 - name: Install Wifi tools
   become: yes
-  pacman: name=wpa_supplicant,dialog
+  pacman: name=wpa_supplicant
 
-- name: Install resolvconf for DNS config
+- name: Install DNS resolver
   become: yes
   pacman: name=openresolv
 
-- name: Install openvpn for VPN connections
+- name: Install VPN tools
   become: yes
-  pacman: name=openvpn
+  pacman: name=openvpn,networkmanager-openvpn
