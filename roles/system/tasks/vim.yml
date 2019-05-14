@@ -3,7 +3,7 @@
   pacman: name=vim
 
 - name: Install vim-plug
-  get_url: 
+  get_url:
     url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     dest: ~/.vim/autoload/plug.vim
 

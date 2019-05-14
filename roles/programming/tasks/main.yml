@@ -1,2 +1,3 @@
+- include: cloud.yml
 - include: docker.yml
 - include: postman.yml
