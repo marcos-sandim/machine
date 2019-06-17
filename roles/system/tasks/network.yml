@@ -7,10 +7,6 @@
   become: yes
   pacman: name=dhcpcd
 
-- name: Enable DHCP Client
-  become: yes
-  systemd: name=dhcpcd enabled=yes state=started
-
 - name: Install Wifi tools
   become: yes
   pacman: name=wpa_supplicant

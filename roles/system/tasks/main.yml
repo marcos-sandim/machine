@@ -1,3 +1,4 @@
+- include: config.yml
 - include: pacman.yml
 - include: network.yml
 - include: core.yml
@@ -11,4 +12,3 @@
 - include: vim.yml
 - include: fonts.yml
 - include: playerctl.yml
-- include: config.yml
