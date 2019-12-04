@@ -1,6 +1,7 @@
 - hosts: localhost
   roles:
     - system
+    - desktop
     - programming
     - applications
     - cleanup
