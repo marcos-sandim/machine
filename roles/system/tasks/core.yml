@@ -11,3 +11,5 @@
       - htop
       - zip
       - unzip
+      - man-db
+      - man-pages

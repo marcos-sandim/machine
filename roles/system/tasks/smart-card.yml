@@ -1,0 +1,6 @@
+- name: Install SmartCard tools
+  become: yes
+  pacman:
+    name:
+      - pcsclite
+      - ccid

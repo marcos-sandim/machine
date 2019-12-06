@@ -1,7 +1,8 @@
-- include: config.yml
 - include: pacman.yml
 - include: network.yml
 - include: core.yml
+- include: config.yml
+- include: smart-card.yml
 - include: shell.yml
 - include: audio.yml
 - include: bluetooth.yml
