@@ -4,11 +4,18 @@
     name:
       - xorg-server
       - xorg-xinit
+      - xorg-xev
+      - xorg-xwininfo
+      - xsel
+      - picom
 
-- name: Install i3
+- name: Install WM
   become: yes
-  pacman: name=i3-wm
-  when: false
+  pacman: name=bspwm
+
+- name: Install hotkey daemon
+  become: yes
+  pacman: name=sxhkd
 
 - name: Install status bar
   yay: name=polybar
