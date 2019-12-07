@@ -8,6 +8,7 @@
       - xorg-xwininfo
       - xsel
       - picom
+      - xdg-user-dirs
 
 - name: Install WM
   become: yes

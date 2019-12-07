@@ -5,10 +5,10 @@
     - numix-kde-theme-git
     - xcursor-breeze
 
-- name: Copy usr theming files
+- name: Copy usr config files
   become: yes
   copy: src=usr/ dest=/usr/
 
-- name: Copy etc theming files
+- name: Copy etc config files
   become: yes
   copy: src=etc/ dest=/etc/
