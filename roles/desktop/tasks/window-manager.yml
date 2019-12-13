@@ -1,4 +1,4 @@
-- name: Install Xorg and tools
+- name: Install Xorg and desktop tools
   become: yes
   pacman:
     name:
@@ -8,7 +8,9 @@
       - xorg-xwininfo
       - xsel
       - picom
+      - i3lock
       - xdg-user-dirs
+      - xorg-xdpyinfo
 
 - name: Install WM
   become: yes
@@ -26,5 +28,5 @@
   pacman:
     name:
       - arandr
-      - i3lock
+      - autorandr
       - scrot # Printscreen
