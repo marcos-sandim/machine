@@ -5,7 +5,7 @@
 
 - name: Install DHCP Client
   become: yes
-  pacman: name=dhcpcd
+  pacman: name=dhclient
 
 - name: Install Wifi tools
   become: yes
