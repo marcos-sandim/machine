@@ -4,3 +4,8 @@
     name:
       - pcsclite
       - ccid
+
+- name: Enable SmartCard service
+  become: yes
+  systemd: name=pcscd enabled=yes state=started
+
