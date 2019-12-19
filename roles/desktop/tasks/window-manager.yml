@@ -11,6 +11,7 @@
       - i3lock
       - xdg-user-dirs
       - xorg-xdpyinfo
+      - wmname
 
 - name: Install WM
   become: yes
