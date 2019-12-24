@@ -2,6 +2,10 @@
   become: yes
   copy: src=etc/ dest=/etc/
 
+- name: Install STOW
+  become: yes
+  pacman: name=stow
+
 - name: Download dotfiles
   git:
     repo=https://github.com/bruno-delfino1995/dotfiles.git
