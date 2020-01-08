@@ -11,8 +11,8 @@ Open the partition manager in the disk you want to install<br />
 
 Create the partitions using the tool then hit enter on [Write]
 
-- Create a partition of 300M for EFI with `EFI System` as type
-- Create one partition of 2xMemorySize for swap with `Linux swap` as type
+- Create a partition of [550MiB](https://superuser.com/a/1310938) for EFI with `EFI System` as type
+- Create one partition of for swap with `Linux swap` as type and space according to your [requirements](https://itsfoss.com/swap-size/)
 - Create another partition for your system with `Linux filesystem` as type
 
 Format the EFI partition<br />
@@ -38,6 +38,9 @@ connections use `dhcp` and for wifi use `wifi-menu`
 Use pacstrap to install the base system into your mount point<br />
 `pacstrap /mnt base base-devel`
 
+Install shell, editor and packages for wifi connection<br />
+`pacman -S zsh vi vim iw dialog wpa_supplicant`
+
 Create a boot directory for the EFI partition<br />
 `mkdir /mnt/boot`
 
@@ -47,14 +50,11 @@ Mount EFI patition on boot directory<br />
 Enter the system's partition<br />
 `arch-chroot /mnt`
 
-Install shell, editor and packages for wifi connection<br />
-`pacman -S zsh vim iw dialog wpa_supplicant`
-
 Create a password to the root user<br />
 `passwd`
 
-Create a user<br />
-`useradd -mg users -G wheel -s /bin/zsh your_user`
+Create a group and user<br />
+`groupadd youruser && useradd -mg your_user -G wheel -s /bin/zsh your_user`
 
 Change your user password<br />
 `passwd your_user`
