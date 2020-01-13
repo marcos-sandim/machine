@@ -1,0 +1,4 @@
+
+- name: Install terminal
+  become: yes
+  pacman: name=rxvt-unicode

@@ -9,10 +9,6 @@
   become: yes
   shell: chsh -s /bin/zsh bruno
 
-- name: Install terminal
-  become: yes
-  pacman: name=termite
-
 - name: Install Antibody
   yay: name=antibody
 
@@ -20,4 +16,4 @@
   git:
     repo=https://github.com/asdf-vm/asdf.git
     dest=~/.asdf
-    version=v0.6.3
+    version=v0.7.6

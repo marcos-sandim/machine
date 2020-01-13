@@ -13,3 +13,4 @@
       - unzip
       - man-db
       - man-pages
+      - moreutils

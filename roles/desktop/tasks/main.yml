@@ -1,4 +1,5 @@
 - include: window-manager.yml
 - include: look-and-feel.yml
+- include: terminal.yml
 - include: app-launcher.yml
 - include: file-manager.yml
