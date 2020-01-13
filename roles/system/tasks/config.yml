@@ -15,4 +15,4 @@
   become: false
 
 - name: Install dotfiles
-  shell: ~/.dotfiles/scripts/install-home
+  shell: ~/.dotfiles/install
