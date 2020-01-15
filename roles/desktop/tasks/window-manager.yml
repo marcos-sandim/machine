@@ -11,6 +11,8 @@
       - i3lock
       - xdg-user-dirs
       - xorg-xdpyinfo
+      - xorg-xsetroot
+      - hsetroot
       - wmname
 
 - name: Install WM
@@ -31,3 +33,4 @@
       - arandr
       - autorandr
       - scrot # Printscreen
+      - redshift
