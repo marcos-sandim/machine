@@ -6,13 +6,15 @@
       - xorg-xinit
       - xorg-xev
       - xorg-xwininfo
-      - xsel
-      - picom
-      - i3lock
-      - xdg-user-dirs
+      - xorg-xkill
       - xorg-xdpyinfo
       - xorg-xsetroot
+      - xss-lock
       - hsetroot
+      - xsel
+      - picom
+      - i3lock-color
+      - xdg-user-dirs
       - wmname
 
 - name: Install WM
@@ -32,5 +34,5 @@
     name:
       - arandr
       - autorandr
-      - scrot # Printscreen
+      - maim # Printscreen
       - redshift
