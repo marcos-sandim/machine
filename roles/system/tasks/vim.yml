@@ -1,6 +1,6 @@
 - name: Install Vim
   become: yes
-  pacman: name=vim
+  pacman: name=gvim
 
 - name: Ensure autoload exists
   file: path=~/.vim/autoload state=directory
