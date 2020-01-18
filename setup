@@ -1,4 +1,7 @@
 #!/bin/bash
+DIR=$(readlink -f "$(dirname "$0")")
+
+cd "$DIR" || exit 1
 
 function instruct () {
   local title=$1
@@ -47,4 +50,4 @@ requirements
 
 python --version
 ansible --version | head -n 1
-ansible-playbook -K main.yml
+ansible-playbook -K -i inventory.yml main.yml
