@@ -9,6 +9,7 @@
       - xorg-xkill
       - xorg-xdpyinfo
       - xorg-xsetroot
+      - xdotool
       - xss-lock
       - hsetroot
       - xsel
@@ -34,5 +35,5 @@
     name:
       - arandr
       - autorandr
-      - maim # Printscreen
-      - redshift
+      - maim # printscreen
+      - redshift # color temperature
