@@ -5,18 +5,8 @@
       - xorg-server
       - xorg-xinit
       - xorg-xev
-      - xorg-xwininfo
-      - xorg-xkill
       - xorg-xdpyinfo
-      - xorg-xsetroot
-      - xdotool
-      - xss-lock
-      - hsetroot
-      - xsel
-      - picom
-      - i3lock-color
       - xdg-user-dirs
-      - wmname
 
 - name: Install WM
   become: yes
@@ -37,3 +27,42 @@
       - autorandr
       - maim # printscreen
       - redshift # color temperature
+      - picom # compositor - transparency
+
+- name: Install locking tools
+  become: yes
+  pacman:
+    name:
+      - xss-lock
+      - i3lock-color
+
+- name: Install clipboard tools
+  block:
+    - become: yes
+      pacman:
+        name:
+          - xsel
+          - xclip
+    - yay: name={{ item }}
+      loop:
+        - clipster
+        - roficlip
+
+- name: Install window management tools
+  block:
+    - become: yes
+      pacman:
+        name:
+          - xorg-xwininfo
+          - xorg-xkill
+          - xdotool
+          - wmname
+          - wmctrl
+    - yay: name=wmutils-git
+
+- name: Install background tools
+  become: yes
+  pacman:
+    name:
+      - xorg-xsetroot
+      - hsetroot
