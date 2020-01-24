@@ -4,4 +4,7 @@
 
 - name: Install ranger
   become: yes
-  pacman: name=ranger
+  pacman:
+    name:
+      - ranger
+      - w3m
