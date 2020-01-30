@@ -2,7 +2,7 @@
 - include: network.yml
 - include: core.yml
 - include: config.yml
-- include: smart-card.yml
+- include: yubikey.yml
 - include: shell.yml
 - include: audio.yml
 - include: bluetooth.yml

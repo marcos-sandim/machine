@@ -9,3 +9,12 @@
   become: yes
   systemd: name=pcscd enabled=yes state=started
 
+- name: Install Yubikey tools
+  become: yes
+  pacman:
+    name:
+      - libu2f-host
+      - yubikey-manager
+      - yubikey-personalization
+      - yubioath-desktop
+
