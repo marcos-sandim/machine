@@ -1,3 +1,0 @@
-- name: Install Emacs
-  become: yes
-  pacman: name=emacs

@@ -10,7 +10,7 @@
 - include: video-player.yml
 - include: image-viewer.yml
 - include: pdf-reader.yml
-- include: vim.yml
+- include: editor.yml
 - include: fonts.yml
 - include: playerctl.yml
 - include: printer.yml
