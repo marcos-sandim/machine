@@ -5,3 +5,4 @@
 - include: conferencing.yml
 - include: messaging.yml
 - include: visual-studio-code.yml
+- include: fonts.yml
