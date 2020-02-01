@@ -46,7 +46,6 @@
     - yay: name={{ item }}
       loop:
         - clipster
-        - roficlip
 
 - name: Install window management tools
   block:
