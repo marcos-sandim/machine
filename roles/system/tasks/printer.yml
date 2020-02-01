@@ -1,18 +1,18 @@
-- name: Install Avahi with local name resolution
+- name: Install avahi
   become: yes
-  pacman:
-    name:
-      - avahi
-      - nss-mdns
-
-- name: Enable Avahi Daemon
-  become: yes
-  systemd: name=avahi-daemon enabled=yes state=started
+  block:
+    - name: install
+      pacman:
+        name:
+          - avahi
+          - nss-mdns
+    - name: enable
+      systemd: name=avahi-daemon enabled=yes state=started
 
 - name: Install printing system
   become: yes
-  pacman: name=cups
-
-- name: Enable printing system
-  become: yes
-  systemd: name=org.cups.cupsd enabled=yes state=started
+  block:
+    - name: install
+      pacman: name=cups
+    - name: enable
+      systemd: name=org.cups.cupsd enabled=yes state=started

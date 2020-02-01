@@ -6,13 +6,18 @@
   become: yes
   pacman: name=stow
 
-- name: Download dotfiles
-  git:
-    repo=https://github.com/bruno-delfino1995/dotfiles.git
-    dest=~/.dotfiles
-    version=master
-    update=yes
-  become: false
-
 - name: Install dotfiles
-  shell: ~/.dotfiles/install
+  block:
+    - name: clone repository
+      git:
+        repo: https://github.com/bruno-delfino1995/dotfiles.git
+        dest: ~/.dotfiles
+        version: master
+        update: yes
+    - name: change remote url
+      shell: git remote set-url origin git@github.com:bruno-delfino1995/dotfiles.git
+      args:
+        chdir: ~/.dotfiles
+    - name: install
+      shell: ~/.dotfiles/install
+

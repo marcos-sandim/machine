@@ -1,13 +1,13 @@
 - name: Install SmartCard tools
   become: yes
-  pacman:
-    name:
-      - pcsclite
-      - ccid
-
-- name: Enable SmartCard service
-  become: yes
-  systemd: name=pcscd enabled=yes state=started
+  block:
+    - name: install
+      pacman:
+        name:
+          - pcsclite
+          - ccid
+    - name: enable
+      systemd: name=pcscd enabled=yes state=started
 
 - name: Install Yubikey tools
   become: yes

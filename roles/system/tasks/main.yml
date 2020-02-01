@@ -6,7 +6,6 @@
 - include: shell.yml
 - include: audio.yml
 - include: bluetooth.yml
-- include: audio-player.yml
 - include: video-player.yml
 - include: image-viewer.yml
 - include: pdf-reader.yml
@@ -14,3 +13,4 @@
 - include: fonts.yml
 - include: playerctl.yml
 - include: printer.yml
+

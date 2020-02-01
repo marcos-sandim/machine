@@ -1,15 +1,13 @@
-- name: Install bluetooth tools
+- name: Install Bluetooth
   become: yes
-  pacman:
-    name:
-      - bluez
-      - bluez-utils
-      - pulseaudio-bluetooth
-
-- name: Enable bluetooth service
-  become: yes
-  systemd: name=bluetooth enabled=yes state=started
-
-- name: Install GUI front-end
-  become: yes
-  pacman: name=blueman
+  block:
+    - name: install back-end
+      pacman:
+        name:
+          - bluez
+          - bluez-utils
+          - pulseaudio-bluetooth
+    - name: enable service
+      systemd: name=bluetooth enabled=yes state=started
+    - name: install front-end
+      pacman: name=blueman
