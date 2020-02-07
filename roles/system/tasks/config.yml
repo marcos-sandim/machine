@@ -20,4 +20,6 @@
         chdir: ~/.dotfiles
     - name: install
       shell: ~/.dotfiles/install
+      # TODO: fix colorscheme installation to be more seamless
+      when: false
 
