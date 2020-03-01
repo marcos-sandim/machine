@@ -20,8 +20,8 @@
     - yay: name={{ item }}
       loop:
         - direnv
-        - the_silver_searcher
     - become: yes
       pacman:
         name:
           - fd
+          - ripgrep
