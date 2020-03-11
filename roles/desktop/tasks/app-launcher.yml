@@ -8,5 +8,5 @@
     - roficlip
     - rofi-calc
 
-- name: Install XDG Autostarter
-  yay: name=dapper
+# - name: Install XDG Autostarter
+#   yay: name=dapper

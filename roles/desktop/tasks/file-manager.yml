@@ -6,5 +6,5 @@
   become: yes
   pacman:
     name:
-      - ranger
+      # - ranger
       - w3m

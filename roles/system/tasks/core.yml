@@ -14,4 +14,4 @@
       - man-db
       - man-pages
       - moreutils
-      - mlocate
+      # - mlocate

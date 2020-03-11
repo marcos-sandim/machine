@@ -1,2 +1,2 @@
-- name: Install Slack
-  yay: name=slack-desktop
+- name: Install Rambox
+  yay: name=rambox-bin

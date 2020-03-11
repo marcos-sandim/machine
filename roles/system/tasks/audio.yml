@@ -6,9 +6,6 @@
     - name: enable
       systemd: name=mpd enabled=yes state=started
 
-- name: Install audio player
-  yay: name=pmus-git
-
 - name: Install audio tools
   become: yes
   pacman:

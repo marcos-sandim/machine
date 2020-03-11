@@ -26,15 +26,15 @@
       - arandr
       - autorandr
       - maim # printscreen
-      - redshift # color temperature
-      - picom # compositor - transparency
+      # - redshift # color temperature
+      # - picom # compositor - transparency
 
 - name: Install locking tools
   become: yes
   pacman:
     name:
-      - xss-lock
-      - i3lock-color
+      # - xss-lock
+      - i3lock
 
 - name: Install clipboard tools
   block:
@@ -54,7 +54,7 @@
         name:
           - xorg-xwininfo
           - xorg-xkill
-          - xdotool
+          # - xdotool
           - wmname
           - wmctrl
     - yay: name=wmutils-git

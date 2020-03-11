@@ -4,10 +4,10 @@
 
 - name: Set ZSH as user's shell
   become: yes
-  shell: chsh -s /bin/zsh bruno
+  shell: chsh -s /bin/zsh sandim
 
-- name: Install Antibody
-  yay: name=antibody
+# - name: Install Antibody
+#   yay: name=antibody
 
 - name: Install ASDF
   git:
@@ -17,9 +17,9 @@
 
 - name: Install shell tools
   block:
-    - yay: name={{ item }}
-      loop:
-        - direnv
+    # - yay: name={{ item }}
+    #   loop:
+    #     - direnv
     - become: yes
       pacman:
         name:

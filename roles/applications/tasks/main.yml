@@ -1,8 +1,8 @@
 - include: enpass.yml
 - include: browsers.yml
 - include: image.yml
-- include: spotify.yml
-- include: conferencing.yml
+- include: music-player.yml
+# - include: conferencing.yml
 - include: messaging.yml
-- include: visual-studio-code.yml
+- include: code-editors.yml
 - include: fonts.yml

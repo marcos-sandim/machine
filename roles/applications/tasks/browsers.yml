@@ -1,6 +1,3 @@
-- name: Install Chrome
-  yay: name=google-chrome
-
 - name: Install Firefox
   become: yes
   pacman: name=firefox
