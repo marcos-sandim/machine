@@ -43,9 +43,6 @@ connections use `dhcp` and for wifi use `wifi-menu`
 Use pacstrap to install the base system into your mount point<br />
 `pacstrap /mnt base base-devel linux linux-firmware`
 
-Install shell, editor and packages for wifi connection<br />
-`pacman -S zsh vi vim iw dialog wpa_supplicant`
-
 Create a boot directory for the EFI partition<br />
 `mkdir /mnt/boot`
 
@@ -54,6 +51,9 @@ Mount EFI patition on boot directory<br />
 
 Enter the system's partition<br />
 `arch-chroot /mnt`
+
+Install shell, editor and packages for wifi connection<br />
+`pacman -S zsh neovim networkmanager nm-connection-editor network-manager-applet lvm2`
 
 Create a password to the root user<br />
 `passwd`
@@ -71,9 +71,11 @@ Set language by unncomenting your it on locale.gen<br />
 `vim /etc/locale.gen`
 
 Create the locale file and config language<br />
-`locale-gen`
-`echo LANG=en_US.UTF-8 > /etc/locale.conf`
-`export LANG=en_US.UTF-8`
+```
+locale-gen
+echo LANG=en_DK.UTF-8 > /etc/locale.conf
+export LANG=en_DK.UTF-8
+```
 
 Create a link between the timezone file and localtime file and set hwclock to store UTC<br />
 `ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime`<br />
@@ -82,13 +84,18 @@ Create a link between the timezone file and localtime file and set hwclock to st
 Choose your hostname<br />
 `echo hostname > /etc/hostname`
 
-We need to edit `/etc/mkinitcpio.conf` to provide support for lvm2.
+####Initramfs
+
+First we need to edit `/etc/mkinitcpio.conf` to provide support for lvm2.
 Edit the file and insert lvm2 between block and filesystems like so:
 
 `HOOKS="base udev ... block lvm2 filesystems"`
 
-Generate an init file which grub uses to load linux<br />
+Generate the initramfs image:
+
 `mkinitcpio -p linux`
+
+###Install a boot loader
 
 Install systemd-boot to the EFI system partition:
 
@@ -110,6 +117,12 @@ linux          /vmlinuz-linux
 initrd         /initramfs-linux.img
 options        root=/dev/mapper/lvm-root rw
 ```
+
+Install the bootloader (grub) and EFI manager<br />
+`pacman -S grub efibootmgr`
+
+Generate an init file which grub uses to load linux<br />
+`mkinitcpio -p linux`
 
 Disconnect from chroot session<br />
 `exit`
